@@ -31,7 +31,6 @@ class CatsController < ApplicationController
 
   def update
     if @cat.update(cat_params)
-      redirect_to @cat, notice: "ねこを更新しました。"
     else
       render :edit, status: :unprocessable_entity
     end
