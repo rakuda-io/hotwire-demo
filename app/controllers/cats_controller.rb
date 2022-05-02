@@ -1,9 +1,10 @@
 class CatsController < ApplicationController
   before_action :set_cat, only: %i[ show edit update destroy ]
 
+  PAGE = 10.freeze
   # GET /cats
   def index
-    @cats = Cat.all
+    @cats = Cat.page(params[:page]).per PAGE
   end
 
   # GET /cats/1
