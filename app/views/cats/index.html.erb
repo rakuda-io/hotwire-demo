@@ -11,6 +11,9 @@
   <%= link_to "クリア", cats_path %>  
 <% end %>
 
+<%= sort_link(@search, :id) %>
+<%= sort_link(@search, :name) %>
+<%= sort_link(@search, :age) %>
 <div id="cats">
   <% @cats.each do |cat| %>
     <%= render cat %>
