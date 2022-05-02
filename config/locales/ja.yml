@@ -1,6 +1,12 @@
 ---
 ja:
   activerecord:
+    models:
+      cat: ねこ
+    attributes:
+      cat:
+        name: 名前
+        age: 年齢
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
