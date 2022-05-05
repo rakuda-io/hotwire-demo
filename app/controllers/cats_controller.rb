@@ -1,7 +1,7 @@
 class CatsController < ApplicationController
   before_action :set_cat, only: %i[ show edit update destroy ]
 
-  PAGE = 10.freeze
+  PAGE = 15.freeze
   # GET /cats
   def index
     @search = Cat.ransack(params[:q])
